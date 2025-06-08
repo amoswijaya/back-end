@@ -1,13 +1,47 @@
-## 🔐 Firebase Admin Setup
+# Back-End Project with Firebase Admin SDK
 
-To enable Firebase Admin SDK for backend use (e.g. Firestore, Auth), follow these steps:
+This repo contains the back-end for our application, using Firebase Admin SDK to manage Firestore and Authentication.
 
-1. Go to [Firebase Console](https://console.firebase.google.com/).
-2. Select your project → **Project settings** → **Service accounts** tab.
-3. Click **"Generate new private key"** → Download the `serviceAccountKey.json` file.
-4. Place the file in your project (e.g. `/config/serviceAccountKey.json`).
-5. Make sure to add it to `.gitignore`:
+## Prerequisites
 
-   ```bash
-   echo serviceAccountKey.json >> .gitignore
-   ```
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- npm or yarn
+- A Firebase project with generated `serviceAccountKey.json`
+- Git
+
+## 🚀 Setup Steps
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/amoswijaya/back-end.git
+cd back-end
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Add Firebase Service Account
+
+Generate serviceAccountKey.json from Firebase Console → Project Settings → Service accounts → Generate new private key
+
+Save the file under src/ or /config depending on your structure.
+
+Ensure it’s added to .gitignore:
+
+```bash
+echo serviceAccountKey.json >> .gitignore
+```
+
+### 4. Run in Development Mode
+
+```bash
+npm run dev
+# or
+yarn dev
+```
